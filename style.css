@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  padding: .5em 1em;
+  border-radius: 2em;
+}
+
+
+.list_input{
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+#task_name{
+  width: 250px;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 2em 0em;
+}
+
+.task{
+  border: 1px solid;
+  margin-bottom: .5em;
+  border-radius: .5em;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
