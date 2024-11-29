@@ -8,14 +8,22 @@
 </head>
 <body>
     <main>
+			<h1>ToDo List</h1>
 			<article class="to-do-list">
 				<div class="list_input">
 					<input type="text" id="task_name" placeholder="Enter a Task">
 					<button onclick="getTaskName()">Add Task</button>
 				</div>
-				<section class="task-lister" id="task_list"></section>
-			</main>
+				<section>
+					<section class="task-lister" id="task_list"></section>
+					<div class="btn-list">
+						<button type="button" onclick="completedTasks()"> All</button>
+						<button type="button" onclick="completedTasks(false)">Active</button>
+						<button type="button" onclick="completedTasks(true)">Completed</button>
+					</div>
+				</section>
 			</article>
+			</main>
 		<script src="./script.js"></script>
 </body>
 </html>

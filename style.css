@@ -31,3 +31,7 @@ button{
   justify-content: space-around;
   align-items: center;
 }
+
+.task-completed{
+  text-decoration: line-through;
+}
