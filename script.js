@@ -12,7 +12,6 @@ function getTaskName(){
   displayTasks(task_list);
 }
 
-
 function displayTasks(list_task){
   const task_list_container = document.getElementById('task_list');
   task_list_container.innerText = "";
