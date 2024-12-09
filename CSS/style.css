@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+:root{
+  --Bright-Blue: hsl(220, 98%, 61%);
+  /* --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%); */
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Light-Grayish-Blue : hsl(236, 33%, 92%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+body{
+
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Dark-Grayish-Blue)
+}
+
+.heading{
+  color: var(--Light-Grayish-Blue);
+  font-size: 2rem;
+}
+
+.topbar{
+  background-image: url('../images/bg-desktop-dark.jpg');
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.to-do-list{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  padding: .5em;
+  border-radius: .5em;
+}
+
+
+.list-input{
+  display: flex;
+  gap: 2em;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  padding: .5em;
+  border-radius: .5em;
+  bottom: 60px;
+  width: 85vh;
+  position: relative;
+  bottom: 100px;
+  right: -30%;
+  
+}
+
+#task-name{
+  font-size: 1.5em;
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  position: relative;
+}
+
+
+.btn-list{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2em;
+}
+
+button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1em;
+  cursor: pointer;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+button:hover, button:focus{
+  color: var(--Bright-Blue);
+}
+
+.btns{
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.task-div{
+  display: flex;
+  gap: .5em;
+  font-size: 1.5em;
+  border-bottom: 1px var(--Dark-Grayish-Blue) solid;
+}
+
+.task{
+  flex: 1;
+}
+
+.add{
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.del-btn{
+  font-weight: 700;
+}
+
+.task-completed p{
+  text-decoration: line-through;
+}

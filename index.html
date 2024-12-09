@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="./CSS/style.css">
     <title>To Do List</title>
 </head>
 <body>
     <main>
-			<h1 class="heading">TODO</h1>
-			<article class="to-do-list">
-				<div class="list_input">
-					<input type="text" id="task_name" placeholder="Enter a Task">
-					<button onclick="getTaskName()" class="add">+</button>
+			<section class="topbar">
+				<h1 class="heading">TODO</h1>
+				<div>
+					<img src="./images/icon-sun.svg" alt="">
 				</div>
+			</section>
+			<div class="list-input">
+				<input type="text" id="task-name" placeholder="Create a new todo...">
+				<button class="add">+</button>
+			</div>
+			<article class="to-do-list">
 				<section>
-					<section class="task-lister" id="task_list"></section>
+					<section class="task-lister" id="tasks"></section>
 					<div class="btn-list">
-						<button type="button" onclick="completedTasks()" class="filter btn-1"> All</button>
-						<button type="button" onclick="completedTasks(false)" class="filter btn-2">Active</button>
-						<button type="button" onclick="completedTasks(true)" class="filter btn-3">Completed</button>
+						<p class="items">0 items left</p>
+						<div class="btns">
+							<button type="button" class="filter btn-all"> All</button>
+							<button type="button" class="filter btn-active">Active</button>
+							<button type="button" class="filter btn-completed">Completed</button>
+						</div>
+						<button class="btn-clear-complete">Clear Completed</button>
 					</div>
 				</section>
 			</article>
 			</main>
-		<script src="./script.js"></script>
+		<script type="module" src="./Main.js"></script>
 </body>
 </html>
