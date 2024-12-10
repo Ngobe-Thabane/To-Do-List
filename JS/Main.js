@@ -1,5 +1,5 @@
-import Task from "./JS/Task.js";
-import TodoApp from "./JS/TodoApp.js";
+import Task from "./Task.js";
+import TodoApp from "./TodoApp.js";
 
 const TODO_APP = new TodoApp();
 let taskId = 0;
