@@ -8,31 +8,31 @@
 </head>
 <body>
     <main>
-			<section class="topbar">
-				<h1 class="heading">TODO</h1>
-				<div>
-					<img src="./images/icon-sun.svg" alt="">
+			<img src="./images/bg-desktop-dark.jpg" class="image" alt="">
+			<section class="container">
+				<div class="heading-container">
+					<h1 class="app-heading">TODO</h1>
+					<div class="theme"><img src="./images/icon-sun.svg" alt="icon-sun"></div>
+				</div>
+
+				<div class="input-container">
+					<input type="text" id="task-name" class="input-holder" placeholder="Create a new todo...">
+					<button type="button" class="add">+</button>
+				</div>
+				<div class="task-container">
+					<div id="tasks"></div>
+					<div class="bottom-bar">
+						<p class="items"></p>
+						<div class="btns">
+							<button class="btn btn-all">All</button>
+							<button class="btn btn-active">Active</button>
+							<button class="btn btn-completed">Completed</button>
+						</div>
+						<button class=" btn btn-clear-complete">Clear Completed</button>
+					</div>
 				</div>
 			</section>
-			<div class="list-input">
-				<input type="text" id="task-name" placeholder="Create a new todo...">
-				<button class="add">+</button>
-			</div>
-			<article class="to-do-list">
-				<section>
-					<section class="task-lister" id="tasks"></section>
-					<div class="btn-list">
-						<p class="items">0 items left</p>
-						<div class="btns">
-							<button type="button" class="filter btn-all"> All</button>
-							<button type="button" class="filter btn-active">Active</button>
-							<button type="button" class="filter btn-completed">Completed</button>
-						</div>
-						<button class="btn-clear-complete">Clear Completed</button>
-					</div>
-				</section>
-			</article>
-			</main>
+		</main>
 		<script type="module" src="./Main.js"></script>
 </body>
 </html>
