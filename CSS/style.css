@@ -88,7 +88,8 @@ button:hover{
 
 .btn{
   font-size: 1.2em;
-  color: rgba(245, 244, 244, 0.833);
+  color: rgba(9, 9, 9, 0.637);
+  font-weight: 700;
 }
 
 .task-div{
@@ -96,6 +97,7 @@ button:hover{
   align-items: center;
   gap : 2em;
   border-bottom: .02em var(--Dark-Grayish-Blue) solid;
+  padding: .5em;
   margin-bottom: .5em;
 }
 
@@ -110,6 +112,7 @@ button:hover{
 .task{
   flex: 1;
   font-size: 2em;
+  color: var(--Light-Grayish-Blue);
 }
 
 .items{
