@@ -8,23 +8,35 @@ document.querySelector('.btn-all').addEventListener('click', ()=> desplayTasks()
 document.querySelector('.btn-active').addEventListener('click', ()=> desplayTasks(false));
 document.querySelector('.btn-completed').addEventListener('click', ()=> desplayTasks(true));
 document.querySelector('.btn-clear-complete').addEventListener('click', ()=> clearTasks());
-document.querySelector('.add').addEventListener('click', () => addTask());
+document.querySelector('.btn-s').addEventListener('click', ()=> addAndSearchTask(true));
+document.querySelector('.add').addEventListener('click', () => addAndSearchTask(false));
 
-function addTask(){
+document.getElementById('task-name').addEventListener('keypress', (pressedKey)=>{
+  if(pressedKey.key === 'Enter') addAndSearchTask(false);
+});
+
+
+function addAndSearchTask(search){
   
   const description = document.getElementById('task-name');
-  
   if(description.value !== ''){
-    TODO_APP.addTask(new Task(description.value, false, taskId++));
+    if(search){
+      desplayTasks(undefined, description.value)
+    }
+    else{
+      TODO_APP.addTask(new Task(description.value, false, taskId++));
+      desplayTasks();
+    } 
     description.value = '';
-    desplayTasks();
   }
 }
 
-function desplayTasks(filterValue){
+function desplayTasks(filterValue, searchString){
   
   const tasks = document.getElementById('tasks');
-  const taskList = filterValue !== undefined ? TODO_APP.filterTasksByStatus(filterValue) : TODO_APP.getTasks();
+  let taskList = filterValue !== undefined ? TODO_APP.filterTasksByStatus(filterValue) : TODO_APP.getTasks();
+
+  if(searchString !== undefined) taskList = TODO_APP.searchTask(searchString);
   
   tasks.innerText = "";
   
@@ -44,6 +56,9 @@ function desplayTasks(filterValue){
     tasks.appendChild(taskDiv);
     
   });
+  
+  const taskContainer = document.querySelector('.task-container');
+  taskContainer.style.display = taskList.length > 0 | searchString !== undefined | filterValue ? "block" : "none";
   updateItemList();
 }
 

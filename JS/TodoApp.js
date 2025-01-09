@@ -9,6 +9,10 @@ export default class TodoApp{
     return this.#taskList;
   }
 
+  searchTask(searchString){
+    return this.#taskList.filter(task => task.getDescription().includes(searchString));
+  }
+
   getTask(taskId){
     return this.#taskList.filter((task) => task.getId() === taskId)[0];
   }

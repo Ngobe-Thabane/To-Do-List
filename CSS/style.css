@@ -39,12 +39,10 @@ body{
 .container{
   box-sizing: border-box;
   display: flex;
-  justify-items: center;
   flex-direction: column;
-  align-self: center;
   gap: 2em;
   width: 50%;
-  margin: 3em;
+  margin: 8.5em auto;
 }
 
 .heading-container{
@@ -69,6 +67,7 @@ button:hover{
   padding: .5em 1em;  
   border-radius: .5em;
   display: flex;
+  gap: 2em;
 }
 .input-holder{
   background-color: inherit;
@@ -89,20 +88,23 @@ button:hover{
 
 .btn{
   font-size: 1.2em;
+  color: rgba(245, 244, 244, 0.833);
 }
 
 .task-div{
   display: flex;
   align-items: center;
   gap : 2em;
-  border-bottom: .02em var(--Light-Grayish-Blue) solid;
+  border-bottom: .02em var(--Dark-Grayish-Blue) solid;
+  margin-bottom: .5em;
 }
 
 .task-container{
   background-color: var(--Very-Dark-Grayish-Blue);
-  padding: .5em 1em;  
-  margin: 3em 0em;
+  padding: .5em 1em;
   border-radius: .5em;
+  margin: 2em auto;
+  display: none;
 }
 
 .task{
