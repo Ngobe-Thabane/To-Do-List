@@ -97,6 +97,7 @@ function createCheckBox(checked){
   const checkBox = createDomElement('input', 'check-box');
   checkBox.type = 'checkbox';
   checkBox.checked = checked;
+  
   return checkBox;
 }
 
